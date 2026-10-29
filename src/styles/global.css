@@ -152,4 +152,64 @@
   .paper :focus-visible {
     outline-color: var(--color-brass-deep);
   }
+
+  .field {
+    width: 100%;
+    min-height: 44px;
+    border: 1px solid #d6ccb4;
+    border-radius: var(--radius-control);
+    background-color: #fbf9f2;
+    padding: 0.625rem 0.875rem;
+    color: var(--color-ink);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .field::placeholder {
+    color: #8b8f7e;
+  }
+
+  textarea.field {
+    min-height: 112px;
+    resize: vertical;
+  }
+
+  .field:disabled {
+    background-color: var(--color-paper-dim);
+    color: var(--color-ink-muted);
+  }
+
+  .table-ledger {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+
+  .table-ledger thead th {
+    background-color: var(--color-paper-dim);
+    color: var(--color-ink-muted);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 0.75rem 1rem;
+    white-space: nowrap;
+  }
+
+  .table-ledger tbody td {
+    border-top: 1px solid var(--color-paper-dim);
+    padding: 0.75rem 1rem;
+    vertical-align: top;
+  }
+
+  .table-ledger tbody tr:hover {
+    background-color: #f1ecdf;
+  }
+
+  .table-ledger .numeral {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .hairline-dark {
+    border-color: var(--hairline-dark);
+  }
 }
