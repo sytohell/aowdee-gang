@@ -1,0 +1,155 @@
+@import './tokens.css';
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --hairline-dark: rgb(210 187 128 / 0.18);
+    --hairline-light: #e7e0cf;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background-color: var(--color-ground);
+    color: var(--color-cream);
+    font-family: var(--font-sans);
+    font-synthesis-weight: none;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brass);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: var(--color-brass);
+    color: var(--color-ground);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .t-display {
+    font-size: clamp(2.75rem, 7vw, 4.5rem);
+    font-weight: 600;
+    line-height: 1.04;
+    letter-spacing: -0.03em;
+  }
+
+  .t-headline {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+
+  .t-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .t-body {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.65;
+  }
+
+  .t-label {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+  }
+
+  .t-numeral {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .pill {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    padding-inline: 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.4;
+    transition:
+      background-color 180ms ease,
+      color 180ms ease,
+      border-color 180ms ease;
+  }
+
+  .pill-primary {
+    background-color: var(--color-brass);
+    color: var(--color-ground);
+  }
+
+  .pill-primary:hover {
+    background-color: #e2cf9c;
+  }
+
+  .pill-primary:active {
+    background-color: var(--color-brass-deep);
+  }
+
+  .pill-quiet {
+    border: 1px solid var(--hairline-dark);
+    color: var(--color-cream);
+    background-color: transparent;
+  }
+
+  .pill-quiet:hover {
+    background-color: var(--color-raised);
+  }
+
+  .landing-field {
+    background:
+      radial-gradient(ellipse 70% 52% at 50% 12%, #03220e 0%, #011d11 58%, #010f09 100%);
+  }
+
+  .paper {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  .paper :focus-visible {
+    outline-color: var(--color-brass-deep);
+  }
+}

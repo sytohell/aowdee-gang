@@ -1,0 +1,13 @@
+node_modules/
+dist/
+coverage/
+test-results/
+playwright-report/
+.env
+.env.local
+.env.*.local
+*.tsbuildinfo
+.impeccable/review/
+.impeccable/build/
+.DS_Store
+Thumbs.db
